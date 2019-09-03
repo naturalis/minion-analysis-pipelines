@@ -1,2 +1,2 @@
-# minion-analysis-pipelines
-Analysis pipelines for metabarcoding (and other sequencing) using MinION
+# foram-assembly
+Scripts, configuration files, pipelines and documentation for the assembly of foram metagenomes
