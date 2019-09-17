@@ -21,7 +21,7 @@ Robert Zomerdijk	S1105934
 
  
 ### Contents
-An introduction	2
+[An introduction] (#intro)	
 Objective	3
 Products	4
 intermediate products	4
@@ -37,8 +37,8 @@ References	12
 
  
 
-
-An introduction
+<a name="intro"></a>
+### An introduction
 Foraminifera are single celled organisms, also known as Protists. They are characterized by an external shell called a “test”. These organisms often live in marine environments. The abundancy of these organisms shows they are an important part of underwater life.[1]
 Foraminifera often live in symbiosis with other organisms. Mostly with algae. In the symbiotic relationships, the Foram is more often than not the host.[2]
 
