@@ -45,14 +45,15 @@ The objective is to extract the Foram reads from the metagenome. Afterwards, a d
 
 
 <a name="objective"></a>
-Objective
+### Objective
 The purpose of this research is to extract the foram reads from the metagenome containing the host Foraminifera Amphisorus and the symbiont Symbiodinium genomes. Thereafter, the extracted reads are used to assemble a draft genome, which is a sequence of genomic DNA having lower accuracy than a finished sequence. 
   
  
 
-
-Products
-intermediate products
+<a name="products"></a>
+### Products
+<a name="Iproducts"></a>
+#### intermediate products
 1.	Action plan
 The action plan must be read by the employers for feedback before submitting it online to GradeWork.
 
@@ -61,7 +62,8 @@ During this presentation the employers and supervisors are informed of the progr
 The presentation will take place at the start of the second period.(beginning of December end of November) 
 This presentation will take 15 to 20 minutes and afterwards there will be 10 minutes for discussion and answering questions.  
 
-Final products
+<a name="Fproducts"></a>
+#### Final products
 3.	A final report.
 
 4.	End presentation.
@@ -76,8 +78,8 @@ Script that are used during this project should be documented and submitted onli
  
 
 
-
-Project organization
+<a name="organization"></a>
+### Project organization
 Head chairman and secretary
 	During the meetings of this project, Julius van Schaik will be the leading chairman. His duties 	are to prepare an agenda and send it to the other project members. The agenda must be 	sent to the other project members at least a day before the meeting.
 
@@ -97,8 +99,8 @@ Employer’s expectations
 
  
 
-
-Flowchart
+<a name="flowchart"></a>
+### Flowchart
 
 --------------------------|
 Metagenome data:          |
@@ -146,8 +148,8 @@ Figure 1: Flowchart of the steps in this project.
 
 
 
-
-Methods
+<a name="methods"></a>
+### Methods
 Tool candidates
 •	Bowtie2
 •	Bwa
@@ -167,8 +169,8 @@ Furthermore the server will be working on Ubuntu version 18.
 
 
  
-
-Planning
+<a name="planning"></a>
+### Planning
 
     Steps                                           amount of time
     ------------------------------------------------------------------
@@ -192,14 +194,14 @@ Figure 2: visualized project planning.
 
 
 
-
-Risk analysis
+<a name="risk"></a>
+### Risk analysis
 Table 1 describes different risks that can occur during this project. These risks will be analysed based on 3 different factors:  chance of occurrence, impact and chance of discovery. Each factor will be rated from 1 (low risk) to 5 (high risk).  The factors are used in calculating the total risk.
 
-Table 1 The different risk factor are multiplied by each other to calculate the total risk. For descriptions with a high risk, preventive measures will be taken. 
+Table 1 The different risk factor are multiplied by each other to calculate the total risk. For descriptions with a high risk, preventive measures will be taken.
 ----------------------------------------------------------------------------------------------------------------------
 Risk description                                         |Chance of occurrence |Impact | Chance of discovery  |Risk  |
----------------------------------------------------------|---------------------|-------|----------------------|------|
+
 Prolonged unexpected absence (due to illness)	         |  2	               |  3    |  1                   |	 6   |
 ---------------------------------------------------------|---------------------|-------|----------------------|------|
 The assigned person to do the presentation is not present|  2		       |  4    |  2                   |	 16  |
@@ -228,13 +230,13 @@ There are other samples available which have a slightly different genotype and a
  
 
 
-
+<a name="conditions"></a>
 Project conditions
 It is expected to extract the symbiotic reads and use the rest of the reads to make a draft genome. The end result is a genome draft of Foraminifera Amphisorus.
 It is not expected to deliver a full genome or to have a genome in which all bacterial reads are extracted. 
 
 
-
+<a name="respons"></a>
 Responsibilities
 Responsible persons
 •	Mapping and filtering reads – Robert Zomerdijk
@@ -245,7 +247,7 @@ Responsible persons
  
 
 
-
+<a name="ref"></a>
 References
 1. FORAM FACTS. Berkeley. [Online] [Citaat van: 11 09 2019.] https://ucmp.berkeley.edu/fosrec/Wetmore.html .
 2. Symbiosis and the Evolution of Larger Foraminifera. J. J. Lee, M. E. McEnery, E. G. Kahn and F. L. Schuster. Vol. 25, No. 2, sl : Micropaleontology.
