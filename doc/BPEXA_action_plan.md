@@ -101,48 +101,8 @@ Employer’s expectations
 
 <a name="flowchart"></a>
 ### Flowchart
+![flow](https://github.com/naturalis/foram-assembly/blob/master/doc/Flowchart.jpg?raw=true "Title")
 
---------------------------|
-Metagenome data:          |
-    - Foramina Amphisoris |
-    - Symbiodinium        |
-    - x bacteria          |
---------------------------|
-          |
-          |
-          V
----------------------------|                
-                           |                
- Aligning metagenome reads |  Match - yes   |------------------------------------|
- against known reference   | ------------>  | Remove reads from metagenome reads |
- genome mapping.           |                |------------------------------------|
-                           |                
- --------------------------|
-          |
-          |   Match - no
-          V
- --------------------------|
- Blast remaining reads     |  Match - yes  |------------------------------------|
- against known bacteria    | ------------> | Remove reads from metagenome reads |
- --------------------------|               |------------------------------------|
-          |
-          |   Match - no
-          V
----------------------------|
-Assemble draft genome      |
----------------------------|
-          |
-          |
-          V
----------------------------|              |-------------------------|
-    Blast contigs          | -----------> | Remove bacteria contigs |
----------------------------|              |-------------------------|
-          |
-          |
-          V
- --------------------------|
-    Final draft genome     |
- --------------------------|
 Figure 1: Flowchart of the steps in this project.
 
 
@@ -198,22 +158,19 @@ Figure 2: visualized project planning.
 ### Risk analysis
 Table 1 describes different risks that can occur during this project. These risks will be analysed based on 3 different factors:  chance of occurrence, impact and chance of discovery. Each factor will be rated from 1 (low risk) to 5 (high risk).  The factors are used in calculating the total risk.
 
-Table 1 The different risk factor are multiplied by each other to calculate the total risk. For descriptions with a high risk, preventive measures will be taken.
-----------------------------------------------------------------------------------------------------------------------
-Risk description                                         |Chance of occurrence |Impact | Chance of discovery  |Risk  |
 
-Prolonged unexpected absence (due to illness)	         |  2	               |  3    |  1                   |	 6   |
----------------------------------------------------------|---------------------|-------|----------------------|------|
-The assigned person to do the presentation is not present|  2		       |  4    |  2                   |	 16  |
----------------------------------------------------------|---------------------|-------|----------------------|------|
-Intermediate deadlines are not met	                 |  2                  |  4    |  2	              |  16  |
----------------------------------------------------------|---------------------|-------|----------------------|------|
-There is not enough data to make a draft genome	         |  3	               |  3    |  2	              |  12  |
----------------------------------------------------------|---------------------|-------|----------------------|------|
+Table 1 The different risk factor are multiplied by each other to calculate the total risk. For descriptions with a high risk, preventive measures will be taken.
+
+ |Risk description                                         |Chance of occurrence |Impact | Chance of discovery  |Risk  |
+ |---------------------------------------------------------|---------------------|-------|----------------------|------|
+ |Prolonged unexpected absence (due to illness)	           |  2	               |  3    |  1                   |	 6   | 
+ |The assigned person to do the presentation is not present|  2		       |  4    |  2                   |	 16  |
+ |Intermediate deadlines are not met	                   |  2                |  4    |  2	              |  16  |
+ |There is not enough data to make a draft genome	   |  3	               |  3    |  2	              |  12  |
 
 Total risks of 10 or lower can be neglected. Preventive measures will be taken for risks between 10 and 20 as written below. If the risk is higher than 20 a more elaborate plan will be written on how to best control this risk.
 
-Preventive measures
+#### Preventive measures
 
 The assigned person to do the presentation is not present
 Everybody gets the PowerPoint and presentation notes. If the presenter is absent, everyone in the group will have the needed information and materials to fill in.
@@ -231,14 +188,14 @@ There are other samples available which have a slightly different genotype and a
 
 
 <a name="conditions"></a>
-Project conditions
+### Project conditions
 It is expected to extract the symbiotic reads and use the rest of the reads to make a draft genome. The end result is a genome draft of Foraminifera Amphisorus.
 It is not expected to deliver a full genome or to have a genome in which all bacterial reads are extracted. 
 
 
 <a name="respons"></a>
-Responsibilities
-Responsible persons
+### Responsibilities
+#### Responsible persons
 •	Mapping and filtering reads – Robert Zomerdijk
 •	Assembly draft genome and blasting contigs – Bo Baas
 •	Both project presentations – Julius van Schaik
@@ -248,6 +205,6 @@ Responsible persons
 
 
 <a name="ref"></a>
-References
+### References
 1. FORAM FACTS. Berkeley. [Online] [Citaat van: 11 09 2019.] https://ucmp.berkeley.edu/fosrec/Wetmore.html .
 2. Symbiosis and the Evolution of Larger Foraminifera. J. J. Lee, M. E. McEnery, E. G. Kahn and F. L. Schuster. Vol. 25, No. 2, sl : Micropaleontology.
