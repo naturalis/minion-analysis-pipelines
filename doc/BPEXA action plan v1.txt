@@ -1,4 +1,4 @@
-Action plan
+#Action plan
 Genomics projects: Assembly of a foraminifera (meta)genome
 
 
@@ -39,7 +39,7 @@ References	12
 
 
 An introduction
-Foraminifera are single celled organisms, also known as Protists. They are characterized by an external shell called a ìtestî. These organisms often live in marine environments. The abundancy of these organisms shows they are an important part of underwater life.[1]
+Foraminifera are single celled organisms, also known as Protists. They are characterized by an external shell called a ‚Äútest‚Äù. These organisms often live in marine environments. The abundancy of these organisms shows they are an important part of underwater life.[1]
 Foraminifera often live in symbiosis with other organisms. Mostly with algae. In the symbiotic relationships, the Foram is more often than not the host.[2]
 
 For this research we have been given a metagenome containing a mixture of a Foraminifera Amphisorus genome and the genome of its symbiont Symbiodinium.
@@ -92,9 +92,9 @@ Shared documents
 Mutual agreements and consequences
 If a project member is sick, the other members have to be notified immediately. If necessary, remaining tasks will be reassigned to other members.
 	
-	Whenever a project member doesnít fulfil his part of the agreement, he/she will be getting 	a simple reminder when itís the first time the agreement isnít fulfilled. There are then no 	consequences. When the agreement isnít fulfilled for a second time and onward, the project 	member will be getting warnings. When a project member has gotten three warnings, they 	will not be allowed to participate in the project anymore.
+	Whenever a project member doesn‚Äôt fulfil his part of the agreement, he/she will be getting 	a simple reminder when it‚Äôs the first time the agreement isn‚Äôt fulfilled. There are then no 	consequences. When the agreement isn‚Äôt fulfilled for a second time and onward, the project 	member will be getting warnings. When a project member has gotten three warnings, they 	will not be allowed to participate in the project anymore.
 
-Employerís expectations
+Employer‚Äôs expectations
 	A draft genome of Foraminifera Amphisoris
 
 
@@ -152,11 +152,11 @@ Figure 1: Flowchart of the steps in this project.
 
 Methods
 Tool candidates
-ï	Bowtie2
-ï	Bwa
-ï	Minimap/miniasm
-ï	MetaSPades
-ï	IDBA-UD
+‚Ä¢	Bowtie2
+‚Ä¢	Bwa
+‚Ä¢	Minimap/miniasm
+‚Ä¢	MetaSPades
+‚Ä¢	IDBA-UD
 
 Computational power
 	During this project, a lot of the computer processing will be done on the Naturalis server.
@@ -240,10 +240,10 @@ It is not expected to deliver a full genome or to have a genome in which all bac
 
 Responsibilities
 Responsible persons
-ï	Mapping and filtering reads ñ Robert Zomerdijk
-ï	Assembly draft genome and blasting contigs ñ Bo Baas
-ï	Both project presentations ñ Julius van Schaik
-ï	The final paper ñ Jennifer Stolk
+‚Ä¢	Mapping and filtering reads ‚Äì Robert Zomerdijk
+‚Ä¢	Assembly draft genome and blasting contigs ‚Äì Bo Baas
+‚Ä¢	Both project presentations ‚Äì Julius van Schaik
+‚Ä¢	The final paper ‚Äì Jennifer Stolk
 
  
 
