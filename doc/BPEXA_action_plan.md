@@ -112,15 +112,15 @@ Figure 1: Flowchart of the steps in this project.
 <a name="methods"></a>
 ### Methods
 #### Tool candidates
-•	Bowtie2
-•	Bwa
-•	Minimap/miniasm
-•	MetaSPades
-•	IDBA-UD
+- Bowtie2
+- Bwa
+- Minimap/miniasm
+- MetaSPades
+- IDBA-UD
 
 #### Computational power
-	During this project, a lot of the computer processing will be done on the Naturalis server.
-	The amount of computational power that has been made available is:
+During this project, a lot of the computer processing will be done on the Naturalis server.<br />
+The amount of computational power that has been made available is:
 -	32 Gb RAM
 -	8 Processor cores
 -	60 Gb of disk memory
