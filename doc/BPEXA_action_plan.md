@@ -4,7 +4,9 @@
 
 #### Supervisors:
 Jan Macher
+
 Jeroen Pijpe
+
 Arjen Speksnijder
 Rutger Vos
 
@@ -20,8 +22,8 @@ Robert Zomerdijk	S1105934
 
 
  
-### Contents
-[An introduction] (#intro)	
+### Table of contents
+[An introduction](#intro)	
 Objective	3
 Products	4
 intermediate products	4
