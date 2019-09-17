@@ -4,7 +4,6 @@
 
 #### Supervisors:
 Jan Macher
-
 Jeroen Pijpe
 Arjen Speksnijder
 Rutger Vos
