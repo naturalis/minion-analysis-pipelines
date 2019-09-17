@@ -3,39 +3,34 @@
 
 
 #### Supervisors:
-Jan Macher
-
-Jeroen Pijpe
-
-Arjen Speksnijder\n/n
-Rutger Vos
+Jan Macher<br />
+Jeroen Pijpe<br />
+Arjen Speksnijder<br />
+Rutger Vos<br />
 
 
 #### Authors:
-Bo Baas			S1107085
-Julius van Schaik	S1100879
-Jennifer Stolk		S1105938
-Robert Zomerdijk	S1105934
-
-
-
+Bo Baas             S1107085<br />
+Julius van Schaik   S1100879<br />
+Jennifer Stolk		S1105938<br />
+Robert Zomerdijk	S1105934<br />
 
 
  
 ### Table of contents
-[An introduction](#intro)	
-Objective	3
-Products	4
-intermediate products	4
-Final products	4
-Project organization	5
-Flowchart	6
-Methods	7
-Planning	8
-Risk analysis	9
-Project conditions	10
-Responsibilities	11
-References	12
+[An introduction](#intro)<br />
+[Objective](#objective)<br />
+[Products](#products)<br />
+[intermediate products](#Iproducts)<br />
+[Final products](#Fproducts)<br />
+[Project organization](#organization)<br />
+[Flowchart](#flowchart)<br />
+[Methods](#methods)<br />
+[Planning](#planning)<br />
+[Risk analysis](#risk)<br />
+[Project conditions](#conditions)<br />
+[Responsibilities](#respons)<br />
+[References](#ref)<br />
 
  
 
@@ -47,9 +42,9 @@ Foraminifera often live in symbiosis with other organisms. Mostly with algae. In
 For this research we have been given a metagenome containing a mixture of a Foraminifera Amphisorus genome and the genome of its symbiont Symbiodinium.
 The objective is to extract the Foram reads from the metagenome. Afterwards, a draft genome of the Foraminifera Amphisorus can be created.
 
- 
 
 
+<a name="objective"></a>
 Objective
 The purpose of this research is to extract the foram reads from the metagenome containing the host Foraminifera Amphisorus and the symbiont Symbiodinium genomes. Thereafter, the extracted reads are used to assemble a draft genome, which is a sequence of genomic DNA having lower accuracy than a finished sequence. 
   
