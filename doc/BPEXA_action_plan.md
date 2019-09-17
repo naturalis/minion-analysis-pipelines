@@ -1,15 +1,15 @@
-#Action plan
-###Genomics projects: Assembly of a foraminifera (meta)genome
+# Action plan
+### Genomics projects: Assembly of a foraminifera (meta)genome
 
 
-####Supervisors:
+#### Supervisors:
 Jan Macher
 Jeroen Pijpe
 Arjen Speksnijder
 Rutger Vos
 
 
-####Authors:
+#### Authors:
 Bo Baas			S1107085
 Julius van Schaik	S1100879
 Jennifer Stolk		S1105938
@@ -20,7 +20,7 @@ Robert Zomerdijk	S1105934
 
 
  
-###Contents
+### Contents
 An introduction	2
 Objective	3
 Products	4
