@@ -80,21 +80,22 @@ Script that are used during this project should be documented and submitted onli
 
 <a name="organization"></a>
 ### Project organization
-Head chairman and secretary
-	During the meetings of this project, Julius van Schaik will be the leading chairman. His duties 	are to prepare an agenda and send it to the other project members. The agenda must be 	sent to the other project members at least a day before the meeting.
+#### Head chairman and secretary
+	
+During the meetings of this project, Julius van Schaik will be the leading chairman. His duties are to prepare an agenda and send it to the other project members. The agenda must be 	sent to the other project members at least a day before the meeting.
 
-	Jennifer Stolk will be assigned to be the secretary of this project. She has to make notes of	every meeting and send them to the other project members and employers. The notes must 	be send to all the other members within 24 hours of each meeting.
+Jennifer Stolk will be assigned to be the secretary of this project. She has to make notes of	every meeting and send them to the other project members and employers. The notes must 	be send to all the other members within 24 hours of each meeting.
 
-Shared documents
-	The documents that will be shared this project will be saved on Github. This Github is shared 	by all the project members and the employers.
+#### Shared documents
+The documents that will be shared this project will be saved on Github. This Github is shared 	by all the project members and the employers.
 
-Mutual agreements and consequences
+#### Mutual agreements and consequences
 If a project member is sick, the other members have to be notified immediately. If necessary, remaining tasks will be reassigned to other members.
 	
-	Whenever a project member doesn’t fulfil his part of the agreement, he/she will be getting 	a simple reminder when it’s the first time the agreement isn’t fulfilled. There are then no 	consequences. When the agreement isn’t fulfilled for a second time and onward, the project 	member will be getting warnings. When a project member has gotten three warnings, they 	will not be allowed to participate in the project anymore.
+Whenever a project member doesn’t fulfil his part of the agreement, he/she will be getting 	a simple reminder when it’s the first time the agreement isn’t fulfilled. There are then no 	consequences. When the agreement isn’t fulfilled for a second time and onward, the project 	member will be getting warnings. When a project member has gotten three warnings, they 	will not be allowed to participate in the project anymore.
 
-Employer’s expectations
-	A draft genome of Foraminifera Amphisoris
+#### Employer’s expectations
+A draft genome of Foraminifera Amphisoris
 
 
  
@@ -110,14 +111,14 @@ Figure 1: Flowchart of the steps in this project.
 
 <a name="methods"></a>
 ### Methods
-Tool candidates
+#### Tool candidates
 •	Bowtie2
 •	Bwa
 •	Minimap/miniasm
 •	MetaSPades
 •	IDBA-UD
 
-Computational power
+#### Computational power
 	During this project, a lot of the computer processing will be done on the Naturalis server.
 	The amount of computational power that has been made available is:
 -	32 Gb RAM
@@ -148,8 +149,8 @@ Furthermore the server will be working on Ubuntu version 18.
     
     7. Making final presentation                       1 week
 
+![plan](https://github.com/naturalis/foram-assembly/blob/master/doc/planning.PNG?raw=true "Title")
 
-Figure 2: visualized project planning.
 
 
 
@@ -172,13 +173,13 @@ Total risks of 10 or lower can be neglected. Preventive measures will be taken f
 
 #### Preventive measures
 
-The assigned person to do the presentation is not present
+##### The assigned person to do the presentation is not present
 Everybody gets the PowerPoint and presentation notes. If the presenter is absent, everyone in the group will have the needed information and materials to fill in.
 
-Intermediate deadlines are not met
+##### Intermediate deadlines are not met
 Each person will regularly communicate  their progress with the other members of the group and notify them on time if help is needed.
 
-There is not enough data to make a draft genome
+##### There is not enough data to make a draft genome
 There are other samples available which have a slightly different genotype and are morphologically different. Because of this there is a change that this is a different organism or just a different variant. If needed these samples can be used to complement the draft.
 
 
@@ -189,17 +190,17 @@ There are other samples available which have a slightly different genotype and a
 
 <a name="conditions"></a>
 ### Project conditions
-It is expected to extract the symbiotic reads and use the rest of the reads to make a draft genome. The end result is a genome draft of Foraminifera Amphisorus.
+It is expected to extract the symbiotic reads and use the rest of the reads to make a draft genome. The end result is a genome draft of Foraminifera Amphisorus.<br />
 It is not expected to deliver a full genome or to have a genome in which all bacterial reads are extracted. 
 
 
 <a name="respons"></a>
 ### Responsibilities
 #### Responsible persons
-•	Mapping and filtering reads – Robert Zomerdijk
-•	Assembly draft genome and blasting contigs – Bo Baas
-•	Both project presentations – Julius van Schaik
-•	The final paper – Jennifer Stolk
+- Mapping and filtering reads – Robert Zomerdijk
+- Assembly draft genome and blasting contigs – Bo Baas
+- Both project presentations – Julius van Schaik
+- The final paper – Jennifer Stolk
 
  
 
