@@ -21,20 +21,20 @@ De dataset bestaat uit fastq files die verkregen zijn met nova sequencing. De re
 6.) Referentie genoom
 Potentiele referentie genomen van de Foraminifera: Amphisorus zijn:
 
-NCBI ID: 71450, 11245, 2827
+      NCBI ID: 71450, 11245, 2827
 
-Let op, deze genomen zijn wel erg ver verwant van de Foraminifera: Amphisorus en zijn daar door waarschijnlijk onbruikbaar.
-Andere referentie genomen:
-Symb FR5: 51771
-Isolates symb: 13759
+      Let op, deze genomen zijn wel erg ver verwant van de Foraminifera: Amphisorus en zijn daar door waarschijnlijk onbruikbaar.
+      Andere referentie genomen:
+      Symb FR5: 51771
+      Isolates symb: 13759
 
 
 5. Plan van Aanpak voortgang
 De helft is af. Nog werken aan de flowchart, hierin moet ook zichtbaar zijn welke tools er gebruikt worden en hoeveel ram en processors daar voor nodig zijn.  Een tool die gebruikt kan worden is minimap voor de mapping assembly.
 
 6. Planning
-- Afronden PVA
-- Dataset beschikbaar maken
+  - Afronden PVA
+  - Dataset beschikbaar maken
 
 7. Rondvraag
 
