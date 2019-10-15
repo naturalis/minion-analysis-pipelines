@@ -1,5 +1,5 @@
 # foram-assembly
-Scripts, configuration files, pipelines and documentation for the assembly of foram metagenomes.
+[Scripts](script), [configuration files](conf), pipelines and [documentation](doc) for the assembly of foram metagenomes.
 
 ### Project itinerary
 
