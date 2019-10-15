@@ -1,3 +1,4 @@
+#https://www.animalgenome.org/bioinfo/resources/manuals/SOAP.html
 #maximal read length
 max_rd_len=150
 [LIB]
