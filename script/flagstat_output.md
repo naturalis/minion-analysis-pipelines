@@ -1,7 +1,7 @@
 # Mapping assembly results
 
 We mapped the reads agains the reference genome of 
-[Symbiodinium microadriaticum](https://www.ncbi.nlm.nih.gov/assembly/GCA_001939145.1/), the results of which are
+[_Symbiodinium microadriaticum_](https://www.ncbi.nlm.nih.gov/assembly/GCA_001939145.1/), the results of which are
 as follows:
 
 
