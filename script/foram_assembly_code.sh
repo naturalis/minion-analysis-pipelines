@@ -1,7 +1,7 @@
 #De lijn code om de fastq bestanden te trimmen.
 /home/ubuntu/fastp -i /home/ubuntu/forum/H10_1.fastq.gz -I /home/ubuntu/forum/H10_2.fastq.gz -o out_H10_1.fastq -O out_H10_2.fastq -h H10.html
 
-#De lijn code voor het mappen.
+#De lijn code voor het mappen. Zie: https://www.ncbi.nlm.nih.gov/assembly/GCA_001939145.1/
 ~/minimap2-2.17_x64-linux/./minimap2 -ax sr ~/forum/TrimFilt_reads/GCA_001939145.1_ASM193914v1_genomic.fna ~/forum/TrimFilt_reads/tf_H10_1.fastq ~/forum/TrimFilt_reads/tf_H10_2.fastq > H10.sam
 
 #De .sam file wordt omgezet in een .bam file.
