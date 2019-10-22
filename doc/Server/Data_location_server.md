@@ -6,6 +6,7 @@
  |/usr/local/bin|fastp|trimming and qualitycheck|
  |/usr/local/bin|virtualenv|needed for installation python3.6|
  |/usr/local/bin/bin|samtools|used for converting sam files to bam files, fix mate, sort and viewing bam files |
+ ||snakemake|making a pipeline|
 
 
 #### datafiles
