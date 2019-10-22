@@ -1,5 +1,15 @@
 
-####tools
+
+####information files
+
+|directory|file name |usage |
+ |---------------------------------------------------------|---------------------|-------|
+ |data/ec2/[2009-04-04, latest]           |     meta-data.json          |    data interchange file with serverinformation   | 
+ |data/openstack/[2012-08-10, 2013-04-04, 2013-10-17, 2015-10-15, latest]| meta-data.json   |   data interchange file with serverinformation | 
+ |volume|fastp.json|data interchange file with information on the reads before and after trimming with fastp| 
+ |volume/html_output|[H, JB, PP].html|html output page from fastp with information on the trimmed reads| 
+ 
+ ####tools
 |directory|tool name |usage |
  |---------------------------------------------------------|---------------------|-------|
  |venv/[bin, include, lib]  |    python3.6    | needed for installation snakemake     | 
@@ -23,14 +33,6 @@
 |volume/TrimFilt_reads|GCA_001939145.1_ASM193914v1_genomic.fna | genome of Symbiodinium|
 |volume/TrimFilt_reads|tf_[H, JB, PP].fastq|trimmed reads with low quality reads filterd out|
 
-####information files
-
-|directory|file name |usage |
- |---------------------------------------------------------|---------------------|-------|
- |data/ec2/[2009-04-04, latest]           |     meta-data.json          |    data interchange file with serverinformation   | 
- |data/openstack/[2012-08-10, 2013-04-04, 2013-10-17, 2015-10-15, latest]| meta-data.json   |   data interchange file with serverinformation | 
- |volume|fastp.json|data interchange file with information on the reads before and after trimming with fastp| 
- |volume/html_output|[H, JB, PP].html|html output page from fastp with information on the trimmed reads| 
  
 
 
