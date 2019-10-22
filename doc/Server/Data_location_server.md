@@ -1,9 +1,20 @@
-####
 
-|directory|File name |meaning file name/usage |
+####tools
+|directory|tool name |usage |
  |---------------------------------------------------------|---------------------|-------|
- |data/ec2/2009-04-04/           |     meta-data.json          |    data interchange file with serverinformation   | 
- ||   |   | 
+ |  |        |      | 
+
+####datafiles
+|directory|file name |explanation |
+ |---------------------------------------------------------|---------------------|-------|
+ |  |        |      | 
+
+####other
+
+|directory|file name |usage |
+ |---------------------------------------------------------|---------------------|-------|
+ |data/ec2/[2009-04-04,latest]/           |     meta-data.json          |    data interchange file with serverinformation   | 
+ |data/ec2/| meta-data.json   |   data interchange file with serverinformation | 
  
 
 
