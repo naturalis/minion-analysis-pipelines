@@ -1,0 +1,94 @@
+# What is left:
+#  - Making sure all temporary files are deleted at the end of the run.
+#  - Documenting the script properly
+# What is done:
+#  - The files are created that contain the unmapped reads.
+
+SAMPLES=["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "JB-1", "JB-3", "JB-4", "JB-5", "JB-6", "JB-9", "JB-10", "PP1", "PP2", "PP3", "PP4", "PP5", "PP6", "PP7", "PP9", "PP10"]
+
+rule all:
+    input:
+       trimfilt=expand("TrimFilt_reads/tf_{sample}_{nummer}.fastq", sample=SAMPLES, nummer=[1,2]),
+       html=expand("HTML_outputs/{sample}.html", sample=SAMPLES),
+       mapping_sam=expand("unmappedBamFiles/{sample}.sam",sample=SAMPLES),
+       samtobam=expand("unmappedBamFiles/{sample}.bam", sample=SAMPLES),
+       namesort=expand("unmappedBamFiles/NS_{sample}.bam", sample=SAMPLES),
+       fixmate=expand("unmappedBamFiles/FM_{sample}.bam", sample=SAMPLES),
+       sort=expand("unmappedBamFiles/Sort_{sample}.bam", sample=SAMPLES),
+       markdup=expand("unmappedBamFiles/MD_{sample}.bam", sample=SAMPLES),
+       filt_mapped=expand("unmappedBamFiles/{sample}_unmapped.bam", sample=SAMPLES)
+
+
+rule help:
+   shell:
+     "echo 'Hallo'"
+
+
+rule Trimming_and_Filtering_reads:
+   input:
+       forw="{sample}_1.fastq.gz",
+       rev="{sample}_2.fastq.gz"
+
+   output:
+       out_forw="TrimFilt_reads/tf_{sample}_1.fastq",
+       out_rev="TrimFilt_reads/tf_{sample}_2.fastq",
+       out_html="HTML_outputs/{sample}.html"
+
+   shell:
+       "fastp -i {input.forw} -I {input.rev} -o {output.out_forw} -O {output.out_rev} -h {output.out_html}"
+
+
+rule SamBam_Mapping:
+   input:
+      refgenome="GCA_001939145.1_ASM193914v1_genomic.fna",
+      forw="TrimFilt_reads/tf_{sample}_1.fastq",
+      rev="TrimFilt_reads/tf_{sample}_2.fastq"
+
+   output:
+      samfile="unmappedBamFiles/{sample}.sam",
+      bamfile=temp("unmappedBamFiles/{sample}.bam")
+
+   shell:
+      """
+      ~/minimap2-2.17_x64-linux/./minimap2 -ax sr {input.refgenome} {input.forw} {input.rev} > {output.samfile}
+      rm {input.forw}
+      rm {input.rev}      
+      samtools view -S -b {output.samfile} > {output.bamfile}
+      """ 
+
+
+rule Mapped_Filter:
+   input:
+      bamfile="unmappedBamFiles/{sample}.bam"
+
+   params:
+      basename="unmappedBamFiles/{sample}"
+
+   output:
+      namesort=temp("unmappedBamFiles/NS_{sample}.bam"),
+      fm=temp("unmappedBamFiles/FM_{sample}.bam"),
+      sort=temp("unmappedBamFiles/Sort_{sample}.bam"),
+      markdup=temp("unmappedBamFiles/MD_{sample}.bam"),
+      unmap="unmappedBamFiles/{sample}_unmapped.bam"
+
+   shell:
+      """
+      rm {params.basename}.sam
+      samtools sort -n -o {output.namesort} {input.bamfile}
+      samtools fixmate {output.namesort} {output.fm}
+      samtools sort -o {output.sort} {output.fm}
+      samtools markdup -r {output.sort} {output.markdup}
+      samtools view -b -f4 {output.markdup} > {output.unmap}
+      """
+
+rule delete_temp_files:
+    params:
+      basename="unmappedBamFiles/{sample}"
+
+    shell:
+      """
+      rm NS_{params.basename}.bam
+      rm FM_{params.basename}.bam
+      rm Sort_{params.basename}.bam
+      rm MD_{sample.basename}.bam
+      """
