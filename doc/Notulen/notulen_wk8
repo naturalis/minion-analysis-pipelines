@@ -1,0 +1,17 @@
+Project progress:
+
+	Problems with mapping resolved.
+	Denovo assembly didn't work, SOAPdenovo error message: out of memmory.
+
+
+TO DO:
+ 
+	soapdenovo run on the bigger naturalis server
+	writing code to blast contigs
+	posting the code on github
+		  
+contigs blasten:
+
+	Shorter contigs <500, delete.
+	And online bast in biopython. 
+
