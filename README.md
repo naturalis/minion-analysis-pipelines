@@ -14,3 +14,4 @@
 - Week 45: Wednesday 6 November
 - Week 46: Exam week (**no activity**)
 
+... weekly meetings at 9:00AM in the lab meeting room
