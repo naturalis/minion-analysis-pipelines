@@ -1,5 +1,5 @@
 ##maximal read length
-max_rd_len=150
+max_rd_len=151
 [LIB]
 ##average insert size
 avg_ins=300
