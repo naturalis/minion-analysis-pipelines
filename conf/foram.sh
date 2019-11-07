@@ -7,4 +7,4 @@
 
 #SBATCH --job-name=Foram
 
-all -s config_file -K 63 -R -o graph_prefix 1>ass.log 2>ass.err
+all -s config_file -K 55 -R -o graph_prefix 1>ass.log 2>ass.err
