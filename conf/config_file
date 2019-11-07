@@ -15,7 +15,7 @@ rank=1
 pair_num_cutoff=3
 ##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
 map_len=32
-##a pair of fastq file, read 1 file should always be followed by read 2 file
+##single fastq file
 p=/home/jan.macher/unmapped_merged.fastq
 
 
