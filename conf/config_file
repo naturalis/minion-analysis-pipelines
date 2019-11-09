@@ -16,5 +16,5 @@ pair_num_cutoff=3
 ##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
 map_len=32
 ##a pair of fastq file
-q1=/home/jan.macher/unmapped_merged_1.fastq
-q2=/home/jan.macher/unmapped_merged_2.fastq
+q1=/home/jan.macher/unmapped_sorted_1.fastq
+q2=/home/jan.macher/unmapped_sorted_2.fastq
