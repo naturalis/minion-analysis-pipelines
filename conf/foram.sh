@@ -7,8 +7,8 @@
 
 #SBATCH --job-name=Foram
 
-fastq-sort --id unmapped_merged_1.fastq > unmapped_sorted_1.fastq
-fastq-sort --id unmapped merged_2.fastq > unmapped_sorted_2.fastq
+fastq-sort --id /data/jan.macher/unmapped_merged_1.fastq > unmapped_sorted_1.fastq
+fastq-sort --id /data/jan.macher/unmapped merged_2.fastq > unmapped_sorted_2.fastq
 
 
-SOAPdenovo-63mer all -s config_file -K 55 -R -o graph_prefix 1>ass.log 2>ass.err
+SOAPdenovo-63mer all -s ~/foram-assembly/conf/config_file -K 55 -R -o graph_prefix 1>ass.log 2>ass.err
