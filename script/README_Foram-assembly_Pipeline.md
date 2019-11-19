@@ -69,7 +69,7 @@
 # Pipeline rules explained:
     rule all:                           Speficies all output files created during the pipeline.
     rule Trimming_and_Filtering_reads:  Trims and filters reads based on a quality score of 20.
-    rule SamBam_Mapping:                Maps trimmed reads to a Symbiodinium reference genome. Afterwards, the created SAM file is                                            converted to a BAM file.
+    rule SamBam_Mapping:                Maps trimmed reads to a Symbiodinium reference genome. Afterwards, the created SAM file is converted to a BAM file.
     rule BamSortbyName:                 Sorts the BAM file by name. 
     rule Fixmate:                       Fill in mate coordinates.
     rule SortingBam:                    Sorts the BAM files by the mate coordinates.
