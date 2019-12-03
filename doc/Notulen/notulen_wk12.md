@@ -11,6 +11,7 @@ Planning:
 - Config file maken
 - Nieuwe assembly aanzetten
 - Data verhuizen
+- verslag bijwerken
 
 
 volgende vergadering
