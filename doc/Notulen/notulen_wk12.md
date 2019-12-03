@@ -10,7 +10,7 @@ Planning:
 - Alvast testen blast script
 - Config file maken
 - Nieuwe assembly aanzetten
-- pie chart maken met aantal gemapte reads
+- Data verhuizen
 
 
 volgende vergadering
