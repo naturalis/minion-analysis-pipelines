@@ -1,0 +1,501 @@
+##maximal read length
+max_rd_len=151
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+##a pair of fastq file
+q1=/data/jan.macher/H10_1_sorted.fastq
+q2=/data/jan.macher/H10_2_sorted.fastq
+
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H1_1_sorted.fastq
+q2=/data/jan.macher/H1_2_sorted.fastq
+
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H2_1_sorted.fastq
+q2=/data/jan.macher/H2_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H3_1_sorted.fastq
+q2=/data/jan.macher/H3_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H4_1_sorted.fastq
+q2=/data/jan.macher/H4_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H5_1_sorted.fastq
+q2=/data/jan.macher/H5_2_sorted.fastq
+
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H6_1_sorted.fastq
+q2=/data/jan.macher/H6_2_sorted.fastq
+
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H7_1_sorted.fastq
+q2=/data/jan.macher/H7_2_sorted.fastq
+
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H8_1_sorted.fastq
+q2=/data/jan.macher/H8_2_sorted.fastq
+
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/H9_1_sorted.fastq
+q2=/data/jan.macher/H9_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-10_1_sorted.fastq
+q2=/data/jan.macher/JB-10_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-1_1_sorted.fastq
+q2=/data/jan.macher/JB-1_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-3_1_sorted.fastq
+q2=/data/jan.macher/JB-3_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-4_1_sorted.fastq
+q2=/data/jan.macher/JB-4_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-5_1_sorted.fastq
+q2=/data/jan.macher/JB-5_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-6_1_sorted.fastq
+q2=/data/jan.macher/JB-6_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/JB-9_1_sorted.fastq
+q2=/data/jan.macher/JB-9_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP10_1_sorted.fastq
+q2=/data/jan.macher/PP10_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP1_1_sorted.fastq
+q2=/data/jan.macher/PP1_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP2_1_sorted.fastq
+q2=/data/jan.macher/PP2_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP3_1_sorted.fastq
+q2=/data/jan.macher/PP3_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP4_1_sorted.fastq
+q2=/data/jan.macher/PP4_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP5_1_sorted.fastq
+q2=/data/jan.macher/PP5_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP6_1_sorted.fastq
+q2=/data/jan.macher/PP6_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP7_1_sorted.fastq
+q2=/data/jan.macher/PP7_2_sorted.fastq
+
+[LIB]
+##average insert size
+avg_ins=300
+##if sequence needs to be reversed
+reverse_seq=0
+##in which part(s) the reads are used
+asm_flags=1
+##use only first 100 bps of each read
+rd_len_cutoff=150
+##in which order the reads are used while scaffolding
+rank=1
+## cutoff of pair number for a reliable connection (at least 3 for short insert size)
+pair_num_cutoff=3
+##minimum aligned length to contigs for a reliable read location (at least 32 for short insert size)
+map_len=32
+
+q1=/data/jan.macher/PP9_1_sorted.fastq
+q2=/data/jan.macher/PP9_2_sorted.fastq
