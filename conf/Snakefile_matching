@@ -1,0 +1,57 @@
+SAMPLES=["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "JB-1", "JB-3", "JB-4", "JB-5", "JB-6", "JB-9", "JB-10", "PP1", "PP2", "PP3", "PP4", "PP5", "PP6", "PP7", "PP9", "PP10"]
+
+rule all:
+    input:
+       trimfilt=expand("tf_{sample}_{nummer}.fastq", sample=SAMPLES, nummer=[1,2]),
+       html=expand("{sample}.html", sample=SAMPLES),
+       matching=expand("{sample}_IDs.txt", sample=SAMPLES),
+       uniq_matching=expand("matched_{sample}.txt", sample=SAMPLES),
+       grep_match=expand("{sample}_{direction}_matched.fastq", sample=SAMPLES, direction=["forward", "reverse"])
+
+
+rule Trimming_and_Filtering_reads:
+   input:
+       forw="/data/jan.macher/{sample}_1.fastq.gz",
+       rev="/data/jan.macher/{sample}_2.fastq.gz"
+
+   output:
+       out_forw=temp("tf_{sample}_1.fastq"),
+       out_rev=temp("tf_{sample}_2.fastq"),
+       out_html=temp("{sample}.html")
+
+   shell:
+       "fastp -i {input.forw} -I {input.rev} -o {output.out_forw} -O {output.out_rev} -h {output.out_html}"
+
+
+rule Matching_IDs:
+    input:
+        forw="/data/jan.macher/{sample}_1_sorted.fastq",
+        rev="/data/jan.macher/{sample}_2_sorted.fastq"
+
+    output:
+        out_ID=temp("{sample}_IDs.txt"),
+        out_match_ID=temp("matched_{sample}.txt")
+
+    shell:
+        """
+        cat {input.forw} | awk 'NR==0 || NR % 4 == 1' | awk '{{print substr($0, 1, length($0)-2)}}' > {output.out_ID}
+        cat {input.rev} | awk 'NR==0 || NR % 4 == 1' | awk '{{print substr($0, 1, length($0)-2)}}' >> {output.out_ID}
+        cat {output.out_ID} | sort | uniq -c | awk '$1 == 2 {{print $2}}' > {output.out_match_ID}
+        """
+
+
+rule Grep_matching:
+    input:
+        ids="matched_{sample}.txt",
+        fqfile1="tf_{sample}_1.fastq",
+        fqfile2="tf_{sample}_2.fastq"
+
+    output:
+        forw_match="{sample}_forward_matched.fastq",
+        rev_match="{sample}_reverse_matched.fastq"
+
+    shell:
+        """
+        egrep -A3 -f {input.ids} {input.fqfile1} > {output.forw_match}
+        egrep -A3 -f {input.ids} {input.fqfile2} > {output.rev_match}
+        """
