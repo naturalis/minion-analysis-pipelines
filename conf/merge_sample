@@ -1,0 +1,8 @@
+## merged alle forward reads tot 1 fastq file.
+cat *_forward_matched.fastq > all_forward_merged.fastq
+
+## merged alle reversed reads tot 1 fastq file.
+cat *_reverse_matched.fastq > all_reverse_merged.fastq
+
+## sampled 30% van de totaal aantal reads en slaat deze op als sample.1.fastq en sample.2.fastq
+fastq-sample -p 0.3 all_forward_merged.fastq all_reverse_merged.fastq -o sample
