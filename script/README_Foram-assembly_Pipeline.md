@@ -9,7 +9,8 @@
     - Python    3.7.4
 
 # Files required to run the pipeline:
-    - Snakefile_Foram
+    - Main file:
+        - Snakefile_Foram
     - Reference genome:
         - GCA_001939145.1_ASM193914v1_genomic.fna
     - Reads:
