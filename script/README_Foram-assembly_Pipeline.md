@@ -46,8 +46,8 @@
         - JB-6_2.fastq.gz
         - JB-9_1.fastq.gz
         - JB-9_2.fastq.gz
-        - JB-9_1.fastq.gz
-        - JB-9_2.fastq.gz
+        - JB-10_1.fastq.gz
+        - JB-10_2.fastq.gz
         - PP1_1.fastq.gz
         - PP1_2.fastq.gz
         - PP2_1.fastq.gz
