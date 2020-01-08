@@ -1,21 +1,21 @@
-SAMPLES=["H1", "H2", "H3"]
+SAMPLES=["H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "JB-1", "JB-3", "JB-4", "JB-5", "JB-6", "JB-9", "PP1", "PP2", "PP3", "PP4", "PP5", "PP6", "PP7", "PP9", "PP10"]
 
 rule all:
     input:
-       trimfilt=expand("test_TrimFilt_reads/tf_{sample}_{nummer}.fastq", sample=SAMPLES, nummer=[1,2]),
-       html=expand("test_HTML_outputs/{sample}.html", sample=SAMPLES),
-       mapping_sam=expand("test_unmappedBamFiles/{sample}.sam",sample=SAMPLES),
-       samtobam=expand("test_unmappedBamFiles/{sample}.bam", sample=SAMPLES),
-       namesort=expand("test_unmappedBamFiles/NS_{sample}.bam", sample=SAMPLES),
-       fixmate=expand("test_unmappedBamFiles/FM_{sample}.bam", sample=SAMPLES),
-       sort=expand("test_unmappedBamFiles/Sort_{sample}.bam", sample=SAMPLES),
-       markdup=expand("test_unmappedBamFiles/MD_{sample}.bam", sample=SAMPLES),
-       filt_mapped=expand("test_unmappedBamFiles/{sample}_unmapped.bam", sample=SAMPLES)
+       trimfilt=expand("TrimFilt_reads/tf_{sample}_{nummer}.fastq", sample=SAMPLES, nummer=[1,2]),
+       html=expand("HTML_outputs/{sample}.html", sample=SAMPLES),
+       mapping_sam=expand("unmappedBamFiles/{sample}.sam",sample=SAMPLES),
+       samtobam=expand("unmappedBamFiles/{sample}.bam", sample=SAMPLES),
+       namesort=expand("unmappedBamFiles/NS_{sample}.bam", sample=SAMPLES),
+       fixmate=expand("unmappedBamFiles/FM_{sample}.bam", sample=SAMPLES),
+       sort=expand("unmappedBamFiles/Sort_{sample}.bam", sample=SAMPLES),
+       markdup=expand("unmappedBamFiles/MD_{sample}.bam", sample=SAMPLES),
+       filt_mapped=expand("unmappedBamFiles/{sample}_unmapped.bam", sample=SAMPLES)
 
 
 rule help:
    shell:
-     "echo 'Hallo Foram Assembly team ;)'"
+     "Hallo"
 
 
 rule Trimming_and_Filtering_reads:
@@ -24,9 +24,9 @@ rule Trimming_and_Filtering_reads:
        rev="{sample}_2.fastq.gz"
 
    output:
-       out_forw="test_TrimFilt_reads/tf_{sample}_1.fastq",
-       out_rev="test_TrimFilt_reads/tf_{sample}_2.fastq",
-       out_html="test_HTML_outputs/{sample}.html"
+       out_forw="TrimFilt_reads/tf_{sample}_1.fastq",
+       out_rev="TrimFilt_reads/tf_{sample}_2.fastq",
+       out_html="HTML_outputs/{sample}.html"
 
    shell:
        "fastp -i {input.forw} -I {input.rev} -o {output.out_forw} -O {output.out_rev} -h {output.out_html}"
@@ -35,42 +35,43 @@ rule Trimming_and_Filtering_reads:
 rule SamBam_Mapping:
    input:
       refgenome="GCA_001939145.1_ASM193914v1_genomic.fna",
-      forw="test_TrimFilt_reads/tf_{sample}_1.fastq",
-      rev="test_TrimFilt_reads/tf_{sample}_2.fastq"
+      forw="TrimFilt_reads/tf_{sample}_1.fastq",
+      rev="TrimFilt_reads/tf_{sample}_2.fastq"
 
    output:
-      samfile="test_unmappedBamFiles/{sample}.sam",
-      bamfile="test_unmappedBamFiles/{sample}.bam"
+      samfile="unmappedBamFiles/{sample}.sam",
+      bamfile="unmappedBamFiles/{sample}.bam"
 
    shell:
       """
-      ~/minimap2-2.17_x64-linux/./minimap2 -ax sr {input.refgenome} {input.forw} {input.rev} > {output.samfile}
-      rm {input.forw}
-      rm {input.rev}      
+      minimap2 -ax sr {input.refgenome} {input.forw} {input.rev} > {output.samfile}
       samtools view -S -b {output.samfile} > {output.bamfile}
-      """ 
+      """
 
 rule BamSortbyName:
    input:
-      "test_unmappedBamFiles/{sample}.bam"
+      "unmappedBamFiles/{sample}.bam"
+
+   params:
+      basename="{sample}"
 
    output:
-      "test_unmappedBamFiles/NS_{sample}.bam"
-   
+      "unmappedBamFiles/NS_{sample}.bam"
+
    shell:
       """
-      rm {params.basename}.sam
       samtools sort -n -o {output} {input}
       rm {input}
+      rm unmappedBamFiles/{params.basename}.sam
       """
 
 rule Fixmate:
    input:
-      "test_unmappedBamFiles/NS_{sample}.bam"
-   
+      "unmappedBamFiles/NS_{sample}.bam"
+
    output:
-      "test_unmappedBamFiles/FM_{sample}.bam"
-   
+      "unmappedBamFiles/FM_{sample}.bam"
+
    shell:
       """
       samtools fixmate {input} {output}
@@ -79,24 +80,27 @@ rule Fixmate:
 
 rule SortingBam:
    input:
-      "test_unmappedBamFiles/FM_{sample}.bam"
-   
+      "unmappedBamFiles/FM_{sample}.bam"
+
+   params:
+      basename="{sample}"
+
    output:
-      "test_unmappedBamFiles/Sort_{sample}.bam"
-   
+      "unmappedBamFiles/Sort_{sample}.bam"
+
    shell:
       """
-      samtools sort -o {output.sort} {output.fm}
+      samtools sort -o {output} {input}
       rm {input}
       """
 
 rule Markduplicates:
    input:
-      "test_unmappedBamFiles/Sort_{sample}.bam"
-   
+      "unmappedBamFiles/Sort_{sample}.bam"
+
    output:
-      "test_unmappedBamFiles/MD_{sample}.bam"
-   
+      "unmappedBamFiles/MD_{sample}.bam"
+
    shell:
       """
       samtools markdup -r {input} {output}
@@ -105,11 +109,11 @@ rule Markduplicates:
 
 rule Mapped_Filter:
    input:
-      "test_unmappedBamFiles/MD_{sample}.bam"
-   
+      "unmappedBamFiles/MD_{sample}.bam"
+
    output:
-      "test_unmappedBamFiles/{sample}_unmapped.bam"
-   
+      "unmappedBamFiles/{sample}_unmapped.bam"
+
    shell:
       """
       samtools view -b -f4 {input} > {output}
