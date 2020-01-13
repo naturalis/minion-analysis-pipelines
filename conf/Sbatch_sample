@@ -9,4 +9,3 @@
 
 
 SOAPdenovo-63mer all -s /home/jan.macher/foram-assembly/conf/config_file_sample -K 55 -R -o graph_prefix_sample 1>ass_sample.log 2>ass_sample.err
-jan.macher@hpc-high-memory-multi-user:~/foram-assembly/sample_results$
