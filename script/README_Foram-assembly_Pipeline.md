@@ -1,4 +1,8 @@
-### Readme Foram Assembly pipeline ###
+### Readme Foram Assembly pipeline - part 1 ###
+This is part 1 of the two part pipeline.
+
+In the first part of the pipeline the original reads are mapped against a reference genome of a Symbiodinium. Afterwards, the
+reads that did map against the reference genome are deleted and reads that did not map against the reference genome are kept.
 
 # Tools used:
     Name:       Version:
@@ -9,7 +13,7 @@
     - Python    3.7.4
 
 # Files required to run the pipeline:
-    - Main file:
+    - Scripts:
         - Snakefile_Foram
     - Reference genome:
         - GCA_001939145.1_ASM193914v1_genomic.fna
@@ -67,7 +71,7 @@
         - PP10_1.fastq.gz
         - PP10_2.fastq.gz
 
-# Pipeline rules explained:
+# Pipeline rules explained
     rule all:                           Speficies all output files created during the pipeline.
     rule Trimming_and_Filtering_reads:  Trims and filters reads based on a quality score of 20.
     rule SamBam_Mapping:                Maps trimmed reads to a Symbiodinium reference genome. Afterwards, the created SAM file is converted to a BAM file.
