@@ -1,0 +1,122 @@
+SAMPLES=["H1, "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10", "JB-1", "JB-3", "JB-4", "JB-5", 
+"JB-6", "JB-9", "PP1", "PP2", "PP3", "PP4", "PP5", "PP6", "PP7", "PP9", "PP10"]
+
+rule all:
+    input:
+       trimfilt=expand("TrimFilt_reads/tf_{sample}_{nummer}.fastq", sample=SAMPLES, nummer=[1,2]),
+       html=expand("HTML_output/{sample}.html", sample=SAMPLES),
+       bamtofastq=expand("unmappedBamFiles/{sample}_unmapped.fastq", sample=SAMPLES),
+       unmaptofastq=expand("unmappedBamFiles/{sample}_{direction}.fastq", sample=SAMPLES, direction=["1", "2"]),
+       fastqsort=expand("unmappedBamFiles/{sample}_{direction}_sorted.fastq", sample=SAMPLES, direction=["1", "2"]),
+       matching=expand("Matched_Files/{sample}_IDs.txt", sample=SAMPLES),
+       uniq_matching=expand("Matched_Files/matched_{sample}.txt", sample=SAMPLES),
+       grep_match=expand("Matched_Files/{sample}_{direction}_matched.fastq", sample=SAMPLES, direction=["forward", "reverse"]),
+       fastqclean=expand("Matched_Files/{sample}_{direction}.fastq", sample=SAMPLES, direction=["forward", "reverse"])
+
+
+
+rule Trimming_and_Filtering_reads:
+   input:
+       forw="{sample}_1.fastq.gz",
+       rev="{sample}_2.fastq.gz"
+
+   output:
+       out_forw=temp("TrimFilt_reads/tf_{sample}_1.fastq"),
+       out_rev=temp("TrimFilt_reads/tf_{sample}_2.fastq"),
+       out_html=temp("HTML_output/{sample}.html")
+
+   shell:
+       "fastp -i {input.forw} -I {input.rev} -o {output.out_forw} -O {output.out_rev} -h {output.out_html}"
+
+
+rule BamtoUnmapFastq:
+    input:
+        "unmappedBamFiles/{sample}_unmapped.bam"
+
+    output:
+        "unmappedBamFiles/{sample}_unmapped.fastq"
+
+    shell:
+       """
+       samtools fastq {input} > {output}
+       """
+
+
+rule UnmaptoFastq:
+    input:
+        "unmappedBamFiles/{sample}_unmapped.fastq"
+
+    output:
+        fq1="unmappedBamFiles/{sample}_1.fastq",
+        fq2="unmappedBamFiles/{sample}_2.fastq"
+
+    shell:
+       """
+       cat {input} | grep '^@.*/1$' -A 3 --no-group-separator > {output.fq1}
+       cat {input} | grep '^@.*/2$' -A 3 --no-group-separator > {output.fq2}
+       """
+
+
+rule FastqSort:
+    input:
+        fq1="unmappedBamFiles/{sample}_1.fastq",
+        fq2="unmappedBamFiles/{sample}_2.fastq"
+
+    output:
+        sort1="unmappedBamFiles/{sample}_1_sorted.fastq",
+        sort2="unmappedBamFiles/{sample}_2_sorted.fastq"
+
+    shell:
+        """
+        fastq-sort --id {input.fq1} > {output.sort1}
+        fastq-sort --id {input.fq2} > {output.sort2}
+        """
+
+rule Matching_IDs:
+    input:
+        forw="unmappedBamFiles/{sample}_1_sorted.fastq",
+        rev="unmappedBamFiles/{sample}_2_sorted.fastq"
+
+    output:
+        out_ID=temp("Matched_Files/{sample}_IDs.txt"),
+        out_match_ID=temp("Matched_Files/matched_{sample}.txt")
+
+    shell:
+        """
+        cat {input.forw} | awk 'NR==0 || NR % 4 == 1' | awk '{{print substr($0, 1, length($0)-2)}}' > {output.out_ID}
+        cat {input.rev} | awk 'NR==0 || NR % 4 == 1' | awk '{{print substr($0, 1, length($0)-2)}}' >> {output.out_ID}
+        cat {output.out_ID} | sort | uniq -c | awk '$1 == 2 {{print $2}}' > {output.out_match_ID}
+        """
+
+
+rule Grep_matching:
+    input:
+        ids="Matched_Files/matched_{sample}.txt",
+        fqfile1="TrimFilt_reads/tf_{sample}_1.fastq",
+        fqfile2="TrimFilt_reads/tf_{sample}_2.fastq"
+
+    output:
+        forw_match="Matched_Files/{sample}_forward_matched.fastq",
+        rev_match="Matched_Files/{sample}_reverse_matched.fastq"
+
+    shell:
+        """
+        egrep -A3 -f {input.ids} {input.fqfile1} > {output.forw_match}
+        egrep -A3 -f {input.ids} {input.fqfile2} > {output.rev_match}
+        """
+
+
+rule FastqCleaner:
+    input:
+        forw="Matched_Files/{sample}_forward_matched.fastq",
+        rev="Matched_Files/{sample}_reverse_matched.fastq"
+
+    output:
+        ofq1="Matched_Files/{sample}_forward.fastq",
+        ofq2="Matched_Files/{sample}_reverse.fastq"
+
+    shell:
+        """
+        egrep -v '^--' {input.forw} > {output.ofq1}
+        egrep -v '^--' {input.rev} > {output.ofq2}
+        """
