@@ -15,7 +15,25 @@ rule all:
 
 rule help:
    shell:
-     "Hallo"
+     """
+     echo 'Tools used:
+Name:       Version:
+- Snakemake 5.7.1
+- Fastp     0.20.0
+- Minimap2  2.17-r941
+- Samtools  1.7, using htslib 1.7-2
+- Python    3.7.4'
+
+rule all:                           Speficies all output files created during the pipeline.
+rule Trimming_and_Filtering_reads:  Trims and filters reads based on a quality score of 20.
+rule SamBam_Mapping:                Maps trimmed reads to a Symbiodinium reference genome. Afterwards, the created SAM file is converted to a BAM file.
+rule BamSortbyName:                 Sorts the BAM file by name.
+rule Fixmate:                       Fill in mate coordinates.
+rule SortingBam:                    Sorts the BAM files by the mate coordinates.
+rule Markduplicates:                Marks and removes all duplicate reads in the sorted BAM file.
+rule Mapped_Filter:                 Filters all mapped reads from the datapool so the unmapped reads are leftover.
+
+     """
 
 
 rule Trimming_and_Filtering_reads:
