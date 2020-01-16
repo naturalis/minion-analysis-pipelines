@@ -1,5 +1,5 @@
 ### Readme Foram Assembly pipeline - part 1 ###
-This is part one of the two part pipeline.
+This is part one of a two part pipeline.
 
 In the first part of the pipeline the original reads are mapped against a reference genome of a Symbiodinium. Afterwards, the
 reads that did map against the reference genome are deleted and reads that did not map against the reference genome are kept.
