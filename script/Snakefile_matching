@@ -120,3 +120,12 @@ rule FastqCleaner:
         egrep -v '^--' {input.forw} > {output.ofq1}
         egrep -v '^--' {input.rev} > {output.ofq2}
         """
+rule all:
+rule Trimming_and_Filtering_reads:
+rule BamtoUnmapFastq:
+rule UnmaptoFastq:
+rule FastqSort:
+rule Matching_IDs:
+rule Grep_matching:
+rule FastqCleaner:
+
